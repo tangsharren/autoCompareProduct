@@ -1,0 +1,170 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="PrestoAddToCart" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1150,1655.33333333333" sap2010:WorkflowViewState.IdRef="PrestoAddToCart_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="PrestoAddToCart" sap:VirtualizedContainerService.HintSize="638,1590.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="596,1498.66666666667" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562,1412.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520,1320.66666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Result.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1044" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="str_Link" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Sheet 1&quot;).Cell(&quot;H5&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="444,162" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+                      <ueab:ReadCellValueX.SaveTo>
+                        <OutArgument x:TypeArguments="x:String">[str_Link]</OutArgument>
+                      </ueab:ReadCellValueX.SaveTo>
+                    </ueab:ReadCellValueX>
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Wooden Children Bed Kids Bed Frame Single Bed Toddler Katil Budak Baby | PrestoMal" sap:VirtualizedContainerService.HintSize="444,750" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="bae03482-2bd0-427b-b4cc-3e001a2ceaf8" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,532" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="334,239.333333333333" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+                              <uix:NMouseScroll.SearchedElement>
+                                <uix:SearchedElement>
+                                  <uix:SearchedElement.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://www.prestomall.com/productdetail/wooden-children-bed-kids-bed-frame-single-bed-69501118" DesignTimeRectangle="728, 764, 283, 67" DesignTimeScaleFactor="1.3500000238418579" ElementType="Text" FriendlyName="'Add to Cart'" FullSelectorArgument="&lt;webctrl parentid='product-detail-main-content' tag='DIV' class='btn-cta btn-red cta-add-to-cart' innertext=' Add to Cart' isleaf='1' parentclass='product-detail-cta' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='product-detail-main-content' tag='DIV' class='btn-cta btn-red cta-add-to-cart' innertext=' Add to Cart' isleaf='1' parentclass='product-detail-cta' type='' aaname=' Add to Cart' check:text='Add to Cart' /&gt;" Guid="8871188e-40cb-474e-9b64-12cf6a8b1630" ImageBase64="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" InformativeScreenshot="830bab8175db890c43be01ae64ff5adb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Wooden Children Bed Kids Bed Frame Single Bed Toddler Katil Budak Baby | PrestoMall - Beds &amp;amp; Bedroom Set' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                  </uix:SearchedElement.Target>
+                                  <uix:SearchedElement.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:SearchedElement.Timeout>
+                                </uix:SearchedElement>
+                              </uix:NMouseScroll.SearchedElement>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NMouseScroll>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Add to Cart'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bae03482-2bd0-427b-b4cc-3e001a2ceaf8" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.prestomall.com/productdetail/wooden-children-bed-kids-bed-frame-single-bed-69501118" DesignTimeRectangle="728, 764, 283, 67" DesignTimeScaleFactor="1.3500000238418579" ElementType="Text" FriendlyName="'Add to Cart'" FullSelectorArgument="&lt;webctrl aaname=' Add to Cart' parentid='product-detail-main-content' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Add to Cart' parentid='product-detail-main-content' tag='DIV' type='' class='btn-cta btn-red cta-add-to-cart' check:innerText='Add to Cart' /&gt;" Guid="24baadf0-62a7-4186-af01-99762885f46e" ImageBase64="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" InformativeScreenshot="e8288109836bf5ba171df2f6cfeea4af.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Wooden Children Bed Kids Bed Frame Single Bed Toddler Katil Budak Baby | PrestoMall - Beds &amp;amp; Bedroom Set' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACKElEQVRYR8XWT0hUURTHcceCMYrsDxi5q1woREUghFIErYQooxDaRLQIiRYtA4Np08aV4MpFi8Cdq6KojYtAhYSgRYtAN4oNuBLMhaj0+p7HudN91zOvmXnTmx98wDlz3znH0XkzbVEUtZRZzJNZzJNZzNPfH1Ky03/5GF5gBT/xBW8wih49VnNSF6DhSZzHdQxhGLdwDRfwFMuIPIuQcwVtkxpzAS5+Bvnt/MaW31jFnldzPuKUzqkacwEJFx/FA8wibF4r+TP1xQ2rpOoCfmjSiynswBqUZg1ntNW+1LSAC43O4ZM2rsd3dGibROpawIVmhyDvhtPoxx08x1v8grXEuF6eSEMLpIVBh/EE6zrY2UUJJ/RonKYv4MKgLszBX0Js4pEey7YAjQ7gODq1lIjU8QPhEqIkZ7Iu8NhruIX3OKtPx+Gx3MD8wb4bWRf4FjQUU/p0HB7LqyQve3hOzDa8ABcPBs2cET1SCTW5F1hnd7MsMB00+4q7+nQl1Hq8M6FylgXuQz50BpB4a7lQL+AdrOFirOEF/hWay/AJb1hoAcX/sgCN5WX/oIMscjuP37pNW4CGRdzEDKyPZ7GEh2jXy5qzAA0nsY1woNwb5vEKV1AZ7JJ5AZp2Q+7z4fDXeiQ1zVjgZTDYuahHUpNpAYYcRNkb6nzWI5VQO4LbkO+UA1rOvMA9hMM3cFWPJEL9EuQftVdL9gKtYhbzZBbzZBbzZBbzE7X9AcKbDl9LW1BLAAAAAElFTkSuQmCC" InformativeScreenshot="b567fa5d723fa36671e70472ee1054ce.jpg" Selector="&lt;html app='msedge.exe' title='Wooden Children Bed Kids Bed Frame Single Bed Toddler Katil Budak Baby | PrestoMall - Beds &amp;amp; Bedroom Set' /&gt;" Url="[str_Link]" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>
